@@ -54,7 +54,7 @@
 - Bearer token
 
 
-9. Add Barang
+9. Delete Barang
 - Method      : DELETE
 - URL         : http://localhost:3000/api/v1/barang/{kode_barang}
 - Requirement : -
