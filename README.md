@@ -14,6 +14,7 @@
 - Method      : POST
 - URL         : http://localhost:3000/api/v1/update-role
 - Requirement : username, role
+- Role        : ADMIN
 - Bearer token
 
 
