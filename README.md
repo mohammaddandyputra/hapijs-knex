@@ -39,14 +39,14 @@
 - Role        : ADMIN
 - Bearer token
 
-7. Update Barang
+8. Update Barang
 - Method      : PUT
 - URL         : http://localhost:3000/api/v1/barang/{kode_barang}
 - Requirement : nama_barang, stok
 - Role        : ADMIN
 - Bearer token
 
-7. Add Barang
+9. Add Barang
 - Method      : DELETE
 - URL         : http://localhost:3000/api/v1/barang/{kode_barang}
 - Requirement : -
