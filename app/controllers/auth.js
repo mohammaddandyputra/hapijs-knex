@@ -1,5 +1,5 @@
 require('dotenv').config()
-const knex = require("../../config/knex");
+const knex = require("../../../config/knex");
 const JWT = require("jsonwebtoken")
 const {compare, hashSync} = require('bcrypt');
 
@@ -43,7 +43,7 @@ const login = async (request, h) => {
                         user,
                         token
                     }
-                }).code(200).header("Authorization", `Bearer ${token}`)
+                }).code(200).state("token", token).header("Authorization", `Bearer ${token}`)
                 
                 return response;
             } 
@@ -125,9 +125,15 @@ const profileUser = async(request, h) => {
     return response
 }
 
+const logout = async(request, h) => {
+    return h.response("logout").unstate('token');
+
+}
+
 module.exports = {
     login,
     register,
     updateRole,
-    profileUser
+    profileUser,
+    logout
 }

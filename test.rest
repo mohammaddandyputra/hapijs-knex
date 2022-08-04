@@ -1,4 +1,4 @@
 # GET http://localhost:3000/api/v1/barang
 
 
-GET http://localhost:3000/admin
+POST http://localhost:3000/api/v1/localhost:3000/send-email

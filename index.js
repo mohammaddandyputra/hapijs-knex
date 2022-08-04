@@ -10,7 +10,7 @@ const validate = async (request, decoded) => {
       .returning("*")
       .then(async (result) => {
         const findUser = result.filter(({ id }) => id === request.id);
-        if (!findUser) {
+         if (!findUser) {
           return { isValid: false };
         }
         return { isValid: true, credentials: findUser };

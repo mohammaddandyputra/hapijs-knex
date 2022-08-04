@@ -1,4 +1,4 @@
-const knex = require("../../config/knex");
+const knex = require("../../../config/knex");
 
 const getAllDataBarang = async(request, h) => {
 

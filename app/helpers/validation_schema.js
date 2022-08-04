@@ -25,11 +25,17 @@ const updateBarangSchema = Joi.object({
   nama_barang: Joi.string().required(),
   stok: Joi.number().required(),
 })
+
+const sendMailSchema = Joi.object({
+  to: Joi.string().required(),
+  subject: Joi.string().required()
+})
   
 module.exports = {
   registerSchema,
   loginSchema,
   updateRoleSchema,
   createBarangSchema,
-  updateBarangSchema
+  updateBarangSchema,
+  sendMailSchema
 }

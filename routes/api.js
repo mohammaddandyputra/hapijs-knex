@@ -18,8 +18,11 @@ const {
     loginSchema,
     updateRoleSchema,
     createBarangSchema,
-    updateBarangSchema
-} = require('../helpers/validation_schema');
+    updateBarangSchema,
+    sendMailSchema
+} = require('../app/helpers/validation_schema');
+
+const {sendMail} = require("../src/controllers/mail")
 
 const routes = [
     
@@ -148,6 +151,21 @@ const routes = [
             }
         }
     },
+    {
+        method: "POST",
+        path: "/api/v1/send-email",
+        handler: sendMail,
+        options: {
+            plugins: {
+                hapiAclAuth: {
+                    secure: false
+                }
+            },
+            validate: {
+                payload: sendMailSchema
+            }
+        }
+    }
 ];
 
 module.exports = { routes };

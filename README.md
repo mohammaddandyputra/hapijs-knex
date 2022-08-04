@@ -61,3 +61,10 @@
 - Requirement : -
 - Role        : ADMIN
 - Bearer token
+
+
+10. Send Mail
+- Method      : POST
+- URL         : http://localhost:3000/api/v1/send-email
+- Requirement : to, subject
+- Bearer token
